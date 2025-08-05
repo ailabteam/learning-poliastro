@@ -147,14 +147,14 @@ def main():
         ga2_coords = ga_transfer2.sample()
         fig_wide.add_trace(go.Scatter3d(x=ga2_coords.x.to_value(u.km), y=ga2_coords.y.to_value(u.km), z=ga2_coords.z.to_value(u.km), mode='lines', line=dict(color='red', width=10), name=f'<b>GA Solution Leg 2 (Total ΔV: {ga_cost.to(u.km/u.s):.2f} km/s)</b>'))
 
-    fig_wide.add_trace(go.Scatter3d(x=[leo_orbit.r[0].to_value(u.km)], y=[leo_orbit.r[1].to_value(u.km)], z=[leo_orbit.r[2].to_value(u.km)], mode='markers', marker=dict(size=10, color='yellow', symbol='diamond-open'), name='<b>Impulse 1</b>'))
+    fig_wide.add_trace(go.Scatter3d(x=[leo_orbit.r[0].to_value(u.km)], y=[leo_orbit.r[1].to_value(u.km)], z=[leo_orbit.r[2].to_value(u.km)], mode='markers', marker=dict(size=30, color='yellow', symbol='diamond-open'), name='<b>Impulse 1</b>'))
     if not ga_is_hohmann:
-         fig_wide.add_trace(go.Scatter3d(x=[apoapsis_position_vec[0].to_value(u.km)], y=[apoapsis_position_vec[1].to_value(u.km)], z=[apoapsis_position_vec[2].to_value(u.km)], mode='markers', marker=dict(size=10, color='yellow', symbol='diamond-open'), name='<b>Impulse 2</b>'))
-    fig_wide.add_trace(go.Scatter3d(x=[target_orbit.r[0].to_value(u.km)], y=[target_orbit.r[1].to_value(u.km)], z=[target_orbit.r[2].to_value(u.km)], mode='markers', marker=dict(size=10, color='yellow', symbol='diamond-open'), name=f'<b>Final Impulse</b>'))
+         fig_wide.add_trace(go.Scatter3d(x=[apoapsis_position_vec[0].to_value(u.km)], y=[apoapsis_position_vec[1].to_value(u.km)], z=[apoapsis_position_vec[2].to_value(u.km)], mode='markers', marker=dict(size=30, color='yellow', symbol='diamond-open'), name='<b>Impulse 2</b>'))
+    fig_wide.add_trace(go.Scatter3d(x=[target_orbit.r[0].to_value(u.km)], y=[target_orbit.r[1].to_value(u.km)], z=[target_orbit.r[2].to_value(u.km)], mode='markers', marker=dict(size=30, color='yellow', symbol='diamond-open'), name=f'<b>Final Impulse</b>'))
     
     fig_wide.update_layout(
         title=dict(text=f"<b>Optimal Trajectory Comparison: {SCENARIO} Scenario</b>", x=0.5, font=dict(size=36)),
-        legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=20)), font=dict(size=30)),
+        legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=30)), font=dict(size=30)),
         scene=dict(
             xaxis=dict(title=dict(text='<b>X (km)</b>', font=dict(size=30))),
             yaxis=dict(title=dict(text='<b>Y (km)</b>', font=dict(size=30))),
@@ -181,7 +181,7 @@ def main():
         
         fig_zoom.update_layout(
             title=dict(text=f"<b>Optimal Trajectory Comparison: {SCENARIO} (Zoomed-in View)</b>", x=0.5, font=dict(size=36)),
-            legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=20)), font=dict(size=30)),
+            legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=30)), font=dict(size=30)),
             scene=dict(
                 xaxis=dict(title=dict(text='<b>X (km)</b>', font=dict(size=30))),
                 yaxis=dict(title=dict(text='<b>Y (km)</b>', font=dict(size=30))),
