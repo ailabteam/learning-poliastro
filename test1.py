@@ -154,11 +154,11 @@ def main():
     
     fig_wide.update_layout(
         title=dict(text=f"<b>Optimal Trajectory Comparison: {SCENARIO} Scenario</b>", x=0.5, font=dict(size=36)),
-        legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=20)), font=dict(size=18)),
+        legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=20)), font=dict(size=30)),
         scene=dict(
-            xaxis=dict(title=dict(text='<b>X (km)</b>', font=dict(size=18))),
-            yaxis=dict(title=dict(text='<b>Y (km)</b>', font=dict(size=18))),
-            zaxis=dict(title=dict(text='<b>Z (km)</b>', font=dict(size=18))),
+            xaxis=dict(title=dict(text='<b>X (km)</b>', font=dict(size=30))),
+            yaxis=dict(title=dict(text='<b>Y (km)</b>', font=dict(size=30))),
+            zaxis=dict(title=dict(text='<b>Z (km)</b>', font=dict(size=30))),
             aspectmode='data' if SCENARIO == 'GEO' else 'cube'
         ),
         margin=dict(l=0, r=0, b=0, t=60)
@@ -181,11 +181,11 @@ def main():
         
         fig_zoom.update_layout(
             title=dict(text=f"<b>Optimal Trajectory Comparison: {SCENARIO} (Zoomed-in View)</b>", x=0.5, font=dict(size=36)),
-            legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=20)), font=dict(size=18)),
+            legend=dict(title=dict(text="<b>Trajectories</b>", font=dict(size=20)), font=dict(size=30)),
             scene=dict(
-                xaxis=dict(title=dict(text='<b>X (km)</b>', font=dict(size=18))),
-                yaxis=dict(title=dict(text='<b>Y (km)</b>', font=dict(size=18))),
-                zaxis=dict(title=dict(text='<b>Z (km)</b>', font=dict(size=18))),
+                xaxis=dict(title=dict(text='<b>X (km)</b>', font=dict(size=30))),
+                yaxis=dict(title=dict(text='<b>Y (km)</b>', font=dict(size=30))),
+                zaxis=dict(title=dict(text='<b>Z (km)</b>', font=dict(size=30))),
                 aspectmode='data'
             ),
             margin=dict(l=0, r=0, b=0, t=60)
